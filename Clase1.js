@@ -52,9 +52,9 @@ for (let i = 1; i <= 10; i++) {
 console.log("-----------------------------------------------")
 console.log("    ")
 console.log("v2-Determinar la estación del año basándose en el mes:");
-const readline = require('readline');
+const readline1 = require('readline');
 
-const rl = readline.createInterface({
+const readline1 = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
@@ -76,7 +76,7 @@ function determinarEstacion(mes) {
 }
 
 function preguntarMes() {
-    rl.question('Por favor, ingresa un número de mes (1-12): ', (respuesta) => {
+    readline1.question('Por favor, ingresa un número de mes (1-12): ', (respuesta) => {
         const mes = parseInt(respuesta);
 
         if (isNaN(mes) || mes < 1 || mes > 12) {
@@ -86,7 +86,7 @@ function preguntarMes() {
             const estacion = determinarEstacion(mes);
             console.log(`La estación correspondiente es: ${estacion}`);
             console.log("-----------------------------------------------")
-            rl.close();  // Cierra la interfaz si el número es válido
+            readline1.close();  // Cierra la interfaz si el número es válido
         }
     });
 }
@@ -125,15 +125,15 @@ console.log("-----------------------------------------------")
 
 const readline = require('readline');
 
-const rl = readline.createInterface({
+const readline = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
 
-const sumar = (a, b) => a + b; // Función para sumar dos números
-const restar = (a, b) => a - b; // Función para restar dos números
-const multiplicar = (a, b) => a * b; // Función para multiplicar dos números
-const dividir = (a, b) => { // Función para dividir dos números
+const suma = (a, b) => a + b; // Función para sumar dos números
+const resta = (a, b) => a - b; // Función para restar dos números
+const multiplica = (a, b) => a * b; // Función para multiplicar dos números
+const dividi = (a, b) => { // Función para dividir dos números
     if (b !== 0) {
         return a / b;
     } else {
@@ -142,10 +142,10 @@ const dividir = (a, b) => { // Función para dividir dos números
 };
 
 function solicitarNumeros(callback) {
-    rl.question('Por favor, ingresa el primer número: ', (respuesta1) => {
+    readline.question('Por favor, ingresa el primer número: ', (respuesta1) => {
         const num1 = parseFloat(respuesta1);
 
-        rl.question('Por favor, ingresa el segundo número: ', (respuesta2) => {
+        readline.question('Por favor, ingresa el segundo número: ', (respuesta2) => {
             const num2 = parseFloat(respuesta2);
 
             if (isNaN(num1) || isNaN(num2)) {
@@ -153,7 +153,7 @@ function solicitarNumeros(callback) {
                 solicitarNumeros(callback);  // Volver a preguntar si los números no son válidos
             } else {
                 callback(num1, num2);
-                rl.close();  // Cierra la interfaz después de la operación
+                readline.close();  // Cierra la interfaz después de la operación
             }
         });
     });
@@ -161,16 +161,16 @@ function solicitarNumeros(callback) {
 
 function ejecutarOperaciones(num1, num2) {
     console.log("Función para sumar dos números");
-    console.log(`${num1} + ${num2} = ` + sumar(num1, num2));
+    console.log(`${num1} + ${num2} = ` + suma(num1, num2));
 
     console.log("Función para restar dos números");
-    console.log(`${num1} - ${num2} = ` + restar(num1, num2));
+    console.log(`${num1} - ${num2} = ` + resta(num1, num2));
 
     console.log("Función para multiplicar dos números");
-    console.log(`${num1} * ${num2} = ` + multiplicar(num1, num2));
+    console.log(`${num1} * ${num2} = ` + multiplica(num1, num2));
 
     console.log("Función para dividir dos números");
-    console.log(`${num1} / ${num2} = ` + dividir(num1, num2));
+    console.log(`${num1} / ${num2} = ` + dividi(num1, num2));
 }
 
 solicitarNumeros(ejecutarOperaciones); // Inicia la solicitud de números y ejecuta las operaciones
