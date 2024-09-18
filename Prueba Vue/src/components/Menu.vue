@@ -35,16 +35,3 @@
     name: 'Menu'
   };
   </script>
-  
-  <style scoped>
-  .navbar {
-    margin-bottom: 20px;
-  }
-  .nav-link {
-    color: white !important;
-  }
-  .navbar-brand {
-    font-weight: bold;
-    color: white !important;
-  }
-  </style>

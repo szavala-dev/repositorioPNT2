@@ -20,24 +20,3 @@
   };
   </script>
   
-  <style scoped>
-  h1 {
-    color: #ffffff;
-  }
-  
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #e0e0e0;
-  }
-  
-  .card {
-    border: 1px solid #444;
-    border-radius: 10px;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  </style>
