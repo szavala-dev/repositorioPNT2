@@ -3,20 +3,18 @@
       <div class="row justify-content-center">
         <div class="col-md-8 text-center">
           <div class="card p-4 bg-dark text-white">
-            <h1 class="card-title text-white">Nosotros</h1>
+            <h1 class="card-title text-white">Gestion de Productos</h1>
             <p class="card-text">
-              Esto es texto simulado del primer ejercicio de Vue. Utilizamos componentes de Bootstrap, previamente instalados con NPM.
+              Esta página es la principal de la App hecha con Vue 3.
             </p>
-            <router-link to="/" class="btn btn-primary mt-3">Volver al Home</router-link>
+            <router-link to="/about" class="btn btn-primary mt-3">Conozca más sobre nosotros</router-link>
           </div>
         </div>
       </div>
     </div>
   </template>
-  
   <script>
   export default {
-    name: 'About'
+    name: 'Home'
   };
   </script>
-  
